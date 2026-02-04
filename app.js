@@ -37,12 +37,18 @@ function check(idx)
     { 
           let p=document.querySelector('p');    
          p.innerText=`The Game is over .Your Level is: ${level}`;
-         document.querySelector('body').style.backgroundColor='red';
+         warning();
+         
+         resetGame();
+    }
+}
+function warning()
+{
+    document.querySelector('body').style.backgroundColor='red';
          setTimeout(()=>{
             document.querySelector('body').style.backgroundColor='white';
          },1000);
-         resetGame();
-    }
+
 }
 function levelUp()
 {
